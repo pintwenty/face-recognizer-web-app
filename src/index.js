@@ -9,9 +9,10 @@ ReactDOM.render( < App / > , document.getElementById("root"));
 
 serviceWorker.unregister();
 
-const express = require("express");
-const path = require("path");
-const PORT = process.env.PORT || 8080;
+//port setting
+const express = require('express')
+const path = require('path')
+const PORT = process.env.PORT || 8080
 
 express()
     .use(express.static(path.join(__dirname, 'public')))
