@@ -5,7 +5,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "tachyons";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render( < App / > , document.getElementById("root"));
 
 serviceWorker.unregister();
 
@@ -19,3 +19,11 @@ express()
     .set('view engine', 'ejs')
     .get('/', (req, res) => res.render('pages/index'))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`))*/
+var http = require('http')
+var server = http.createServer((function (request, response) {
+    response.writeHead(200, {
+        "Content-Type": "text/plain"
+    });
+    response.end("Hello World\n");
+}));
+server.listen(3000);
