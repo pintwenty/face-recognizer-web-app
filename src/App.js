@@ -137,8 +137,7 @@ class App extends Component {
       imageURL = {
         this.state.imageURL
       }
-      /> < /
-      div >
+      />  </div >
     );
   }
 }
